@@ -1,9 +1,0 @@
-pipeline{
-    stages{
-        stage('Build'){
-            steps{
-                sh 'mvn -B clean packages -Dmaven.test.skip=true'
-            }
-        }
-    }
-}
