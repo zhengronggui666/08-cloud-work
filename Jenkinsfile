@@ -37,7 +37,6 @@ pipeline {
             steps{
                 echo "4.Push Docker Image Stage"
                 sh "docker login --username=admin harbor.edu.cn -p Harbor12345"
-                sh "docker push harbor.edu.cn/library/prometheus-test-demo:${BUILD_ID}"
             }
         }
     }
