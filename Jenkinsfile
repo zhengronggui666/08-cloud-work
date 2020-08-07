@@ -1,20 +1,13 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+    agent none
+    stages{
+        stage('Clone to master'){
+            agent{
+                label 'master'
             }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            steps{
+                echo "1.Git Clone Stage"
+                git url:""
             }
         }
     }
