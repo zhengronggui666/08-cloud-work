@@ -28,8 +28,6 @@ pipeline {
             }
             steps{
                 echo "3.Image Build Stage"
-                sh 'docker build -f Dockerfile --build-arg jar_name=target/prometheus-test-demo-0.0.1-SNAPSHOT.jar -t prometheus-test-demo:${BUILD_ID} . '
-                sh 'docker tag prometheus-test-demo:${BUILD_ID} harbor.edu.cn/library/prometheus-test-demo:${BUILD_ID}'
             }
         }
         stage('Push'){
