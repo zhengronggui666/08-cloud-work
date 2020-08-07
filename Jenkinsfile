@@ -30,6 +30,11 @@ pipeline {
                 echo "3.Image Build Stage"
             }
         }
+        stage('Test'){
+            steps{
+                echo "3.Test Stage"
+            }
+        }
         stage('Push'){
             agent{
                 label 'master'
